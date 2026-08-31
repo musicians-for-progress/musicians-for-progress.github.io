@@ -1,0 +1,30 @@
+[
+  {
+    "id": "example",
+    "title": "new event",
+    "date": "2026-08-30T14:00:00-04:00",
+    "location": "New York, NY",
+    "description": "Example"
+  },
+  {
+    "id": "seasons-of-change-2026",
+    "title": "Seasons of Change: Composing Communities",
+    "date": "2026-08-30T14:00:00-04:00",
+    "location": "New York, NY",
+    "description": "Details coming soon — check back for the full program."
+  },
+  {
+    "id": "sheltering-belonging-2025",
+    "title": "Sheltering Belonging: A Benefit for Rosie's Place",
+    "date": "2025-11-16T00:00:00-05:00",
+    "location": "New York, NY",
+    "description": "A benefit concert supporting Rosie's Place. This event collected product donations for the shelter."
+  },
+  {
+    "id": "all-art-is-political-2025",
+    "title": "All Art Is Political Concert",
+    "date": "2025-07-17T00:00:00-04:00",
+    "location": "New York, NY",
+    "description": "A benefit concert raising funds and awareness for the Rian Immigrant Center."
+  }
+]
