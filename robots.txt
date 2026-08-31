@@ -1,5 +1,2 @@
-# This site is a prototype and isn't ready to be indexed yet.
-# Remove this Disallow line (and the <meta name="robots"> tag on every
-# page) when the site is ready to go live and be found in search results.
 User-agent: *
 Disallow: /
