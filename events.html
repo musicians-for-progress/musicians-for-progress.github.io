@@ -16,13 +16,14 @@
   <script src="js/analytics.js" defer></script>
   <script src="js/include.js" defer></script>
   <script src="js/events.js" defer></script>
+  <script src="js/reveal.js" defer></script>
 </head>
 <body data-page="events">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div id="site-header">
     <noscript>
-      <header class="site-header">
+      <header class="site-header site-header--solid">
         <div class="container site-header__bar">
           <a class="brand" href="index.html"><span>Musicians for Progress</span></a>
           <nav aria-label="Primary">
@@ -44,14 +45,15 @@
 
   <main id="main">
 
-    <section class="section section--tight">
-      <div class="container">
-        <h1>Events/Outreach</h1>
-        <p class="lede" style="margin-top:1rem;">Our concerts double as fundraisers — each one is organized around a partner organization doing frontline community work.</p>
+    <section class="page-hero" style="background-image:url('images/concert-hall.jpg');">
+      <div class="container page-hero__inner">
+        <span class="page-hero__eyebrow">Events/Outreach</span>
+        <h1>Every concert doubles as a fundraiser.</h1>
+        <p class="lede">Each one is organized around a partner organization doing frontline community work.</p>
       </div>
     </section>
 
-    <section class="section section--tight">
+    <section class="section section--tight reveal" data-reveal>
       <div class="container">
         <h2>Upcoming</h2>
         <div id="upcoming-events" class="stack" style="margin-top:1.5rem;">
@@ -60,7 +62,7 @@
       </div>
     </section>
 
-    <section class="section section--alt">
+    <section class="section section--alt reveal" data-reveal>
       <div class="container">
         <h2>Past Events</h2>
         <div id="past-events" class="stack" style="margin-top:1.5rem;">

@@ -15,13 +15,14 @@
 
   <script src="js/analytics.js" defer></script>
   <script src="js/include.js" defer></script>
+  <script src="js/reveal.js" defer></script>
 </head>
 <body data-page="donate">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div id="site-header">
     <noscript>
-      <header class="site-header">
+      <header class="site-header site-header--solid">
         <div class="container site-header__bar">
           <a class="brand" href="index.html"><span>Musicians for Progress</span></a>
           <nav aria-label="Primary">
@@ -43,12 +44,16 @@
 
   <main id="main">
 
-    <section class="section section--tight">
-      <div class="container split">
-        <div class="stack-lg">
-          <h1>Support Our Work</h1>
-          <p class="lede">Every donation goes directly toward concert production and the partner organizations we raise funds for.</p>
+    <section class="page-hero" style="background-image:url('images/community-photo.jpg');">
+      <div class="container page-hero__inner">
+        <span class="page-hero__eyebrow">Donate</span>
+        <h1>Support our work.</h1>
+        <p class="lede">Every donation goes directly toward concert production and the partner organizations we raise funds for.</p>
+      </div>
+    </section>
 
+    <section class="section reveal" data-reveal>
+      <div class="container container--narrow stack-lg">
           <!--
             Donate button — placeholder.
 
@@ -70,8 +75,6 @@
           -->
           <a class="btn btn--primary" href="#" aria-describedby="donate-note">Donate</a>
           <p id="donate-note" style="font-size:0.9rem;color:var(--ink-soft);">Online giving is being set up — check back soon, or reach out to us directly in the meantime.</p>
-        </div>
-        <img class="person__photo" style="aspect-ratio:4/3;" src="images/community-photo.jpg" alt="Musicians for Progress engaging with the community.">
       </div>
     </section>
 

@@ -17,13 +17,14 @@
   <script src="js/include.js" defer></script>
   <script src="js/events.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/reveal.js" defer></script>
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div id="site-header">
     <noscript>
-      <header class="site-header">
+      <header class="site-header site-header--solid">
         <div class="container site-header__bar">
           <a class="brand" href="index.html"><span>Musicians for Progress</span></a>
           <nav aria-label="Primary">
@@ -44,21 +45,49 @@
   </div>
 
   <main id="main">
+    <section class="hero" style="background-image:url('images/hero-home.jpg');">
+      <svg class="hero-deco" viewBox="0 0 640 320" aria-hidden="true">
+        <path class="hero-deco__path" d="M10,220 C120,60 220,300 340,160 C420,64 480,220 630,90"></path>
+        <circle class="hero-deco__dot hero-deco__dot--1" cx="340" cy="160" r="7"></circle>
+        <circle class="hero-deco__dot hero-deco__dot--2" cx="630" cy="90" r="7"></circle>
+      </svg>
 
-    <section class="hero">
-      <div class="container split">
-        <div class="stack-lg">
-          <h1 class="hero__eyebrow-free-heading">Creating social change through classical and contemporary music.</h1>
-          <p class="lede">Musicians for Progress is a New York City-based nonprofit that brings classical and contemporary musicians together for benefit concerts supporting immigrant, housing, and social-justice organizations.</p>
-          <a class="btn btn--primary" href="get-involved.html">Get Involved</a>
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <span class="hero__eyebrow hero-fade hero-fade--1">Musicians for Progress</span>
+            <h1 class="hero-fade hero-fade--2">Creating social change through classical and contemporary music.</h1>
+            <p class="lede hero-fade hero-fade--3">A New York City-based nonprofit bringing classical and contemporary musicians together for benefit concerts supporting immigrant, housing, and social-justice organizations.</p>
+            <div class="cta-group hero-fade hero-fade--4">
+              <a class="btn btn--primary" href="#newsletter">Join Our Email List</a>
+              <a class="btn btn--ghost" href="events.html">See Upcoming Events</a>
+            </div>
+          </div>
         </div>
-        <img class="hero__image" src="images/hero-home.jpg" alt="Musicians for Progress performing together at a benefit concert.">
       </div>
     </section>
 
-    <div class="container"><div class="staff" aria-hidden="true"></div></div>
+    <!--
+      Social Proof section, manually update numbers these as the org grows.
+    -->
+    <section class="stats-band">
+      <div class="container stats-band__grid">
+        <div>
+          <p class="stat__number">2</p> <!-- EDIT THE NUMBER HERE -->
+          <p class="stat__label">Benefit Concerts</p>
+        </div>
+        <div>
+          <p class="stat__number">10+</p> <!-- EDIT THE NUMBER HERE -->
+          <p class="stat__label">Musicians Involved</p>
+        </div>
+        <div>
+          <p class="stat__number">2</p> <!-- EDIT THE NUMBER HERE -->
+          <p class="stat__label">Community Partners</p>
+        </div>
+      </div>
+    </section>
 
-    <section class="section section--tight">
+    <section class="section section--tight reveal" data-reveal>
       <div class="container">
         <h2>Our Events</h2>
         <div id="home-events" class="stack" style="margin-top:1.5rem;">
@@ -68,7 +97,21 @@
       </div>
     </section>
 
-    <section class="section section--alt">
+    <section class="section section--tight reveal" data-reveal>
+      <div class="container">
+        <p class="proof-strip__label">Concerts organized in support of</p>
+        <div class="proof-strip__logos">
+          <a href="who-we-support.html" aria-label="Rian Immigrant Center">
+            <img src="images/partner-rian-center.png" alt="Rian Immigrant Center logo.">
+          </a>
+          <a href="who-we-support.html" aria-label="Rosie's Place">
+            <img src="images/partner-rosies-place.png" alt="Rosie's Place logo.">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt reveal" data-reveal>
       <div class="container split split--reverse">
         <img class="person__photo" style="aspect-ratio:4/3;" src="images/concert-hall.jpg" alt="Musicians for Progress performing in a concert hall.">
         <div class="stack-lg">
@@ -79,7 +122,7 @@
       </div>
     </section>
 
-    <section class="section section--tight">
+    <section id="newsletter" class="section section--tight reveal" data-reveal>
       <div class="container container--narrow">
         <h2>Join Our Email List</h2>
         <p style="margin-top:0.75rem;">Hear about upcoming concerts and outreach opportunities first.</p>
