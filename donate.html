@@ -16,6 +16,7 @@
   <script src="js/analytics.js" defer></script>
   <script src="js/include.js" defer></script>
   <script src="js/reveal.js" defer></script>
+  <script type="module" src="https://donorbox.org/widgets.js" async></script>
 </head>
 <body data-page="donate">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -54,27 +55,14 @@
 
     <section class="section reveal" data-reveal>
       <div class="container container--narrow stack-lg">
-          <!--
-            Donate button — placeholder.
+        <dbox-widget campaign="general-donations-957900" type="donation_form" enable-auto-scroll="true"></dbox-widget>
 
-            This needs a real payment processor before it can accept
-            cards. Two straightforward, no-code options once you have an
-            account set up:
-
-              - PayPal: create a "Donate" button at
-                https://www.paypal.com/buttons — it gives you an embeddable
-                snippet, or a PayPal.Me link you can use directly as this
-                button's href.
-              - Stripe: create a Payment Link at
-                https://dashboard.stripe.com/payment-links (choose
-                "let customers choose what to pay" for a donation) and use
-                that link as this button's href.
-
-            Replace the "#" href below with your real link once you have
-            it — no other code changes needed.
-          -->
-          <a class="btn btn--primary" href="#" aria-describedby="donate-note">Donate</a>
-          <p id="donate-note" style="font-size:0.9rem;color:var(--ink-soft);">Online giving is being set up — check back soon, or reach out to us directly in the meantime.</p>
+        <noscript>
+          <p>
+            Online giving requires JavaScript. You can also donate directly at
+            <a class="text-link" href="https://donorbox.org/general-donations-957900">donorbox.org/general-donations-957900</a>.
+          </p>
+        </noscript>
       </div>
     </section>
 
