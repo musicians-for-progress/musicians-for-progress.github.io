@@ -1,10 +1,3 @@
-/* =========================================================================
-   Musicians for Progress — Site Styles
-   Plain CSS, no build step, no framework. Custom properties (below) hold
-   the whole design system, so re-theming later means editing values here.
-   ========================================================================= */
-
-/* -------------------------- Design tokens -------------------------- */
 :root {
   /* Color */
   --ink: #201a2e;         /* primary text */
@@ -177,8 +170,7 @@ p + p { margin-top: 1rem; }
   .split--reverse > :first-child { order: 2; }
 }
 
-/* Signature motif: a quiet nod to a blank music staff, used as a section
-   divider. Purely decorative. */
+/* Hero Shape */
 .staff {
   height: 26px;
   background-image: repeating-linear-gradient(
