@@ -25,6 +25,9 @@
   --overlay: 27, 36, 30;  /* rgb of --ink, used in hero photo overlays */
 
   /* Type */
+  --font-header: "Assistant", Helvetica, Arial, sans-serif;
+  --font-body: "Futura", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
@@ -236,9 +239,12 @@ p + p { margin-top: 1rem; }
   border-bottom-color: var(--line);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
 }
-.site-header--solid .brand,
-.site-header--solid .nav-list > li > a,
-.site-header--solid .nav-list details summary { color: var(--ink); }
+.site-header .brand,
+.site-header .nav-list > li > a,
+.site-header .nav-list details summary { 
+  text-decoration: none;
+  font-family: var(--font-header); 
+}
 .site-header--solid .nav-toggle { border-color: var(--line); }
 .site-header--solid .nav-toggle__bars,
 .site-header--solid .nav-toggle__bars::before,
@@ -251,6 +257,7 @@ p + p { margin-top: 1rem; }
   justify-content: space-between;
   gap: 1rem;
   padding-block: 0.85rem;
+  background-color: var(--paper);
 }
 
 .brand {
