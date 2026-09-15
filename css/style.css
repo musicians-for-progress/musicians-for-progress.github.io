@@ -28,8 +28,8 @@
   --font-header: "Assistant", Helvetica, Arial, sans-serif;
   --font-body: "Futura", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  /* --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; */
 
   /* Layout */
   --content-width: 1120px;
@@ -113,7 +113,7 @@ button { cursor: pointer; }
 
 /* -------------------------- Typography -------------------------- */
 h1, h2, h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-weight: 500;
   line-height: 1.15;
   color: var(--ink);
@@ -133,7 +133,7 @@ p + p { margin-top: 1rem; }
 }
 
 .quote {
-  font-family: var(--font-display);
+  font-family: var(--font-header);
   font-size: clamp(1.4rem, 1.6vw + 1rem, 2rem);
   font-style: italic;
   line-height: 1.35;
@@ -265,7 +265,7 @@ p + p { margin-top: 1rem; }
   align-items: center;
   gap: 0.65rem;
   text-decoration: none;
-  font-family: var(--font-display);
+  font-family: var(--font-header);
   font-size: 1.2rem;
   font-weight: 700; /* bolded, per brand request */
   flex-shrink: 0;
@@ -389,7 +389,7 @@ p + p { margin-top: 1rem; }
 .hero__content { max-width: 640px; }
 .hero__eyebrow {
   display: block;
-  font-family: var(--font-display);
+  font-family: var(--font-header);
   font-style: italic;
   font-size: 1.05rem;
   color: var(--green-light);
