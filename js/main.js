@@ -1,18 +1,9 @@
 /**
  * Homepage email sign-up form.
- *
- * GitHub Pages only serves static files — it can't run server-side code to
- * receive this form itself, so it needs a small third-party form service.
- * Formspree (https://formspree.io) has a free tier that works well here:
- *
- *   1. Create a free account at https://formspree.io
+ *   1. Create account at https://formspree.io
  *   2. Create a form and copy its endpoint URL (looks like
  *      https://formspree.io/f/xxxxxxxx)
  *   3. Paste it into FORM_ENDPOINT below
- *
- * Until an endpoint is set, submitting the form shows an honest "not
- * connected yet" message rather than a fake success message — so nobody
- * believes they signed up when nothing was actually captured.
  */
 (function () {
   const FORM_ENDPOINT = ""; // TODO: paste your Formspree (or similar) endpoint here

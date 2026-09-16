@@ -7,28 +7,28 @@
  * in its markup. Respects prefers-reduced-motion via the global CSS rule
  * in style.css, which zeroes out the transition duration.
  */
-(function () {
-  document.addEventListener("DOMContentLoaded", function () {
-    const targets = document.querySelectorAll("[data-reveal]");
-    if (!targets.length) return;
+// (function () {
+//   document.addEventListener("DOMContentLoaded", function () {
+//     const targets = document.querySelectorAll("[data-reveal]");
+//     if (!targets.length) return;
 
-    if (!("IntersectionObserver" in window)) {
-      targets.forEach(function (el) { el.classList.add("is-visible"); });
-      return;
-    }
+//     if (!("IntersectionObserver" in window)) {
+//       targets.forEach(function (el) { el.classList.add("is-visible"); });
+//       return;
+//     }
 
-    const observer = new IntersectionObserver(
-      function (entries, obs) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
-    );
+//     const observer = new IntersectionObserver(
+//       function (entries, obs) {
+//         entries.forEach(function (entry) {
+//           if (entry.isIntersecting) {
+//             entry.target.classList.add("is-visible");
+//             obs.unobserve(entry.target);
+//           }
+//         });
+//       },
+//       { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+//     );
 
-    targets.forEach(function (el) { observer.observe(el); });
-  });
-})();
+//     targets.forEach(function (el) { observer.observe(el); });
+//   });
+// })();
