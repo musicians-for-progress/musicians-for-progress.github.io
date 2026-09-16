@@ -1,7 +1,13 @@
+/* =========================================================================
+   Musicians for Progress — Site Styles
+   Plain CSS, no build step, no framework. Custom properties (below) hold
+   the whole design system, so re-theming later means editing values here.
+   ========================================================================= */
+
 /* -------------------------- Design tokens -------------------------- */
 :root {
   /* Color */
-  --ink: #1b241e;         /* primary text  */
+  --ink: #1b241e;         /* primary text (dark, warm green-grey) */
   --ink-soft: #55635b;    /* secondary text */
   --paper: #fbf8f3;       /* page background */
   --paper-dim: #efe7d8;   /* card / section-alt background */
@@ -20,8 +26,8 @@
   --overlay: 27, 36, 30;  /* rgb of --ink, used in hero photo overlays */
 
   /* Type */
-  --font-header: "Assistant", Helvetica, Arial, sans-serif;
-  --font-body: "Futura", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
   /* Layout */
   --content-width: 1120px;
@@ -105,7 +111,7 @@ button { cursor: pointer; }
 
 /* -------------------------- Typography -------------------------- */
 h1, h2, h3 {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 500;
   line-height: 1.15;
   color: var(--ink);
@@ -125,7 +131,7 @@ p + p { margin-top: 1rem; }
 }
 
 .quote {
-  font-family: var(--font-header);
+  font-family: var(--font-display);
   font-size: clamp(1.4rem, 1.6vw + 1rem, 2rem);
   font-style: italic;
   line-height: 1.35;
@@ -208,31 +214,33 @@ p + p { margin-top: 1rem; }
 .cta-group { display: flex; flex-wrap: wrap; gap: 1rem; }
 
 /* -------------------------- Site header / nav -------------------------- */
+/*
+  Mobile (<900px): header is always solid so the hamburger button and
+  brand text are never invisible against a hero photo.
+  Desktop (≥900px): header starts transparent over the hero image and
+  transitions to solid once the hero scrolls out of view (via JS in
+  include.js). The --solid modifier handles that transition.
+*/
 .site-header {
   position: fixed;
   inset-inline: 0;
   top: 0;
   z-index: 100;
+  /* Solid by default — desktop JS will remove the background when a hero
+     is present and the page loads at the top. */
   background: var(--paper);
   border-bottom: 1px solid var(--line);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
   transition: background-color 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
 
-/* .site-header--transparent {
+/* Desktop-only transparent state, applied by JS when hero is in view. */
+.site-header--transparent {
   background: transparent;
   border-bottom-color: transparent;
   box-shadow: none;
-} */
-.site-header .brand,
-.site-header .nav-list > li > a,
-.site-header .nav-list details summary { color: var(--white); }
-.site-header .nav-toggle { border-color: rgba(255, 255, 255, 0.6); }
-.site-header .nav-toggle__bars,
-.site-header .nav-toggle__bars::before,
-.site-header .nav-toggle__bars::after { background: var(--white); }
-.site-header .social-link { border-color: rgba(255, 255, 255, 0.6); color: var(--white); }
-/* .site-header--transparent .brand,
+}
+.site-header--transparent .brand,
 .site-header--transparent .nav-list > li > a,
 .site-header--transparent .nav-list details summary { color: var(--white); }
 .site-header--transparent .nav-toggle { border-color: rgba(255, 255, 255, 0.6); }
@@ -240,7 +248,9 @@ p + p { margin-top: 1rem; }
 .site-header--transparent .nav-toggle__bars::before,
 .site-header--transparent .nav-toggle__bars::after { background: var(--white); }
 .site-header--transparent .social-link { border-color: rgba(255, 255, 255, 0.6); color: var(--white); }
-.site-header--transparent .nav-list > li > a:hover { color: var(--white); } */
+.site-header--transparent .nav-list > li > a:hover { color: var(--white); }
+
+/* Solid state — always active on mobile, toggled by JS on desktop. */
 .site-header--solid {
   background: var(--paper);
   border-bottom-color: var(--line);
@@ -249,13 +259,6 @@ p + p { margin-top: 1rem; }
 .site-header--solid .brand,
 .site-header--solid .nav-list > li > a,
 .site-header--solid .nav-list details summary { color: var(--ink); }
-
-/* .site-header .brand,
-.site-header .nav-list > li > a,
-.site-header .nav-list details summary { 
-  text-decoration: none;
-  font-family: var(--font-header); 
-} */
 .site-header--solid .nav-toggle { border-color: var(--line); }
 .site-header--solid .nav-toggle__bars,
 .site-header--solid .nav-toggle__bars::before,
@@ -268,7 +271,6 @@ p + p { margin-top: 1rem; }
   justify-content: space-between;
   gap: 1rem;
   padding-block: 0.85rem;
-  background-color: var(--paper);
 }
 
 .brand {
@@ -276,7 +278,7 @@ p + p { margin-top: 1rem; }
   align-items: center;
   gap: 0.65rem;
   text-decoration: none;
-  font-family: var(--font-header);
+  font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 700; /* bolded, per brand request */
   flex-shrink: 0;
@@ -355,7 +357,6 @@ p + p { margin-top: 1rem; }
   .nav-list > li > a { padding: 0.3rem 0.1rem; border-bottom: 2px solid transparent; font-size: 0.96rem; }
   .nav-list > li > a:hover,
   .nav-list a[aria-current="page"] { border-bottom-color: var(--green); }
-  /* .site-header .nav-list > li > a:hover { color: var(--white); } */
   .site-header--solid .nav-list > li > a:hover { color: var(--ink); }
 
   .nav-list .has-submenu { position: relative; }
@@ -400,7 +401,7 @@ p + p { margin-top: 1rem; }
 .hero__content { max-width: 640px; }
 .hero__eyebrow {
   display: block;
-  font-family: var(--font-header);
+  font-family: var(--font-display);
   font-style: italic;
   font-size: 1.05rem;
   color: var(--green-light);
@@ -409,7 +410,7 @@ p + p { margin-top: 1rem; }
 .hero .lede { color: rgba(255, 255, 255, 0.9); margin-top: 1.1rem; }
 .hero .cta-group { margin-top: 2rem; }
 
-/* This is for the animated line in the main/hero page. */
+/* Decorative animated line — a quiet nod to a flowing melodic line. */
 .hero-deco {
   position: absolute;
   right: 4%;
@@ -464,8 +465,6 @@ p + p { margin-top: 1rem; }
   inset: 0;
   background: linear-gradient(180deg, rgba(var(--overlay), 0.15) 0%, rgba(var(--overlay), 0.82) 100%);
 }
-/* .page-hero__inner { position: relative; z-index: 2; padding-block: clamp(1.5rem, 8vh, 4.5rem); width: 100%; }
-.page-hero__eyebrow { display: block; font-family: var(--font-display); font-style: italic; font-size: 2.75rem; color: var(--green-light); } */
 .page-hero__inner { position: relative; z-index: 2; padding-block: clamp(2.75rem, 8vh, 4.5rem); width: 100%; }
 .page-hero__eyebrow { display: block; font-family: var(--font-display); font-style: italic; font-size: 1rem; color: var(--green-light); }
 .page-hero h1 { color: var(--white); margin-top: 0.5rem; }
