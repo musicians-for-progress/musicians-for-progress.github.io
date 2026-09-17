@@ -18,7 +18,7 @@
       event.preventDefault();
 
       if (!FORM_ENDPOINT) {
-        status.textContent = "Sign-ups aren't connected yet — please check back soon.";
+        status.textContent = "Sign-ups aren't connected yet: please check back soon.";
         return;
       }
 
@@ -34,10 +34,10 @@
           form.reset();
           status.textContent = "Thanks for signing up!";
         } else {
-          status.textContent = "Something went wrong — please try again.";
+          status.textContent = "Something went wrong: please try again.";
         }
       } catch (err) {
-        status.textContent = "Something went wrong — please try again.";
+        status.textContent = "Something went wrong: please try again.";
       } finally {
         submitBtn.disabled = false;
       }
