@@ -68,7 +68,7 @@
   }
 
   const EMPTY_STATE =
-    '<p class="empty-state">No events at the moment: check back soon, or follow ' +
+    '<p class="empty-state">No events at the moment — check back soon, or follow ' +
     '<a class="text-link" href="https://www.instagram.com/musiciansforprogress/" target="_blank" rel="noopener">@musiciansforprogress</a> on Instagram for updates.</p>';
 
   async function renderHomePreview() {
