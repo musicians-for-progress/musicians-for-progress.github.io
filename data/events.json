@@ -1,4 +1,11 @@
 [
+ {
+    "id": "example 1",
+    "title": "Example",
+    "date": "2026-09-30T14:00:00-04:00",
+    "location": "New York, NY",
+    "description": "This is a test for the upcoming event page."
+  },
   {
     "id": "seasons-of-change-2026",
     "title": "Seasons of Change: Composing Communities",
