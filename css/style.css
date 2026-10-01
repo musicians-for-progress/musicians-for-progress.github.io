@@ -548,7 +548,7 @@ p + p { margin-top: 1rem; }
 /* -------------------------- Instagram / media page -------------------------- */
 .instagram-embed-slot { border: 1px dashed var(--line); padding: clamp(2rem, 4vw, 3rem); text-align: center; color: var(--ink-soft); }
 
-/* -------------------------- Donate page intro -------------------------- */
+/* -------------------------- Donate page intro -------------------------- for commit*/
 .donate-intro {
   background: var(--paper);
   padding-block:
