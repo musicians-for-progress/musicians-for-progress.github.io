@@ -548,6 +548,69 @@ p + p { margin-top: 1rem; }
 /* -------------------------- Instagram / media page -------------------------- */
 .instagram-embed-slot { border: 1px dashed var(--line); padding: clamp(2rem, 4vw, 3rem); text-align: center; color: var(--ink-soft); }
 
+/* -------------------------- Donate page intro -------------------------- */
+.donate-intro {
+  background: var(--paper);
+  padding-block:
+    calc(var(--header-height) + clamp(2rem, 5vw, 4rem))
+    clamp(2.5rem, 6vw, 5rem);
+}
+
+.donate-intro__grid {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: stretch;
+}
+
+.donate-intro__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 4rem);
+  background: var(--paper-dim);
+  border: 1px solid var(--line);
+}
+
+.donate-intro__eyebrow {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--green-deep);
+}
+
+.donate-intro__copy .lede {
+  margin-top: 1rem;
+  max-width: 38ch;
+}
+
+.donate-intro__media {
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.donate-intro__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+@media (min-width: 800px) {
+  .donate-intro__grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .donate-intro__media,
+  .donate-intro__media img {
+    min-height: 460px;
+  }
+}
 /* -------------------------- Utility -------------------------- */
 .center { text-align: center; margin-inline: auto; }
 .mt-0 { margin-top: 0 !important; }
+
+body[data-page="about"] .page-hero__eyebrow {
+  font-size: 0.85rem;
+}
