@@ -556,9 +556,16 @@ p + p { margin-top: 1rem; }
     clamp(2.5rem, 6vw, 5rem);
 }
 
+/* Let the two-column layout span the full screen */
+.donate-intro__grid.container {
+  max-width: none;
+  width: 100%;
+  padding-inline: 0;
+}
+
 .donate-intro__grid {
   display: grid;
-  gap: clamp(1.5rem, 3vw, 3rem);
+  gap: 0;
   align-items: stretch;
 }
 
@@ -566,23 +573,19 @@ p + p { margin-top: 1rem; }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(2rem, 5vw, 4rem);
+
+  /* Keeps the text aligned with the rest of the site's content
+     while allowing the background to extend to the screen edge */
+  padding-top: clamp(2rem, 5vw, 4rem);
+  padding-bottom: clamp(2rem, 5vw, 4rem);
+  padding-left: max(
+    var(--gutter),
+    calc((100vw - var(--content-width)) / 2 + var(--gutter))
+  );
+  padding-right: clamp(2rem, 5vw, 4rem);
+
   background: var(--paper-dim);
-  border: 1px solid var(--line);
-}
-
-.donate-intro__eyebrow {
-  display: block;
-  margin-bottom: 0.75rem;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1rem;
-  color: var(--green-deep);
-}
-
-.donate-intro__copy .lede {
-  margin-top: 1rem;
-  max-width: 38ch;
+  border: 0;
 }
 
 .donate-intro__media {
@@ -591,6 +594,7 @@ p + p { margin-top: 1rem; }
 }
 
 .donate-intro__media img {
+  display: block;
   width: 100%;
   height: 100%;
   min-height: 320px;
@@ -599,12 +603,19 @@ p + p { margin-top: 1rem; }
 
 @media (min-width: 800px) {
   .donate-intro__grid {
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    grid-template-columns: 1fr 1fr;
   }
 
   .donate-intro__media,
   .donate-intro__media img {
     min-height: 460px;
+  }
+}
+
+@media (max-width: 799px) {
+  .donate-intro__copy {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
   }
 }
 /* -------------------------- Utility -------------------------- */
