@@ -550,20 +550,18 @@ p + p { margin-top: 1rem; }
 
 /* -------------------------- Donate page intro -------------------------- for commit*/
 .donate-intro {
-  padding: var(--header-height) 0 0;
-  margin: 0;
+  padding-block: var(--header-height) 0;
 }
 
+/* Let the two-column layout span the full screen */
 .donate-intro__grid.container {
-  width: 100%;
   max-width: none;
-  padding: 0;
-  margin: 0;
+  width: 100%;
+  padding-inline: 0;
 }
 
 .donate-intro__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 0;
   align-items: stretch;
 }
@@ -575,15 +573,15 @@ p + p { margin-top: 1rem; }
 }
 
 .donate-intro__media {
-  margin: 0;
-  min-height: 460px;
+  min-height: 320px;
+  overflow: hidden;
 }
 
 .donate-intro__media img {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 460px;
+  min-height: 320px;
   object-fit: cover;
 }
 
