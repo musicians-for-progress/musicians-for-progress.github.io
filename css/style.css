@@ -550,10 +550,7 @@ p + p { margin-top: 1rem; }
 
 /* -------------------------- Donate page intro -------------------------- for commit*/
 .donate-intro {
-  background: var(--paper);
-  padding-block:
-    calc(var(--header-height) + clamp(2rem, 5vw, 4rem))
-    clamp(2.5rem, 6vw, 5rem);
+  padding-block: var(--header-height) 0;
 }
 
 /* Let the two-column layout span the full screen */
