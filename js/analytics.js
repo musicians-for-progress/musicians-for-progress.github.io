@@ -1,16 +1,13 @@
 /**
  * Google Analytics (GA4) — optional, OFF by default.
  *
- *   1. Create a GA4 property at https://analytics.google.com
- *   2. Copy its Measurement ID (looks like "G-XXXXXXXXXX")
- *   3. Paste it into MEASUREMENT_ID below
  *
  * This file is included on every page, but makes zero network requests
  * and does nothing until MEASUREMENT_ID is set — so enabling analytics
  * site-wide is a one-line, one-file change.
  */
 (function () {
-  const MEASUREMENT_ID = ""; // TODO: paste your GA4 Measurement ID here, e.g. "G-XXXXXXXXXX"
+  const MEASUREMENT_ID = "G-54M8WNP26T";
   if (!MEASUREMENT_ID) return;
 
   const script = document.createElement("script");
@@ -24,3 +21,14 @@
   gtag("js", new Date());
   gtag("config", MEASUREMENT_ID);
 })();
+document.addEventListener("click", (event) => {
+  const link = event.target.closest('a[href*="donate.html"]');
+
+  if (!link) return;
+
+  window.trackEvent?.("donate_click", {
+    link_text: link.textContent.trim(),
+    link_url: link.href,
+    source_page: window.location.pathname
+  });
+});
