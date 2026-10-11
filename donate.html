@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-54M8WNP26T"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-54M8WNP26T');
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donate — Musicians for Progress</title>
@@ -21,7 +12,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .donate-intro {
+      padding-top: 0;
+      margin-top: 0;
+    }
 
+    .donate-intro__grid.container {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .donate-intro__grid {
+      gap: 0;
+    }
+
+    .donate-intro__copy,
+    .donate-intro__media {
+      margin: 0;
+    }
+
+    .donate-intro__media img {
+      display: block;
+    }
+  </style>
+</head>
   <script src="js/analytics.js" defer></script>
   <script src="js/include.js" defer></script>
   <script src="js/reveal.js" defer></script>
@@ -54,17 +71,26 @@
 
   <main id="main">
 
-    <section class="page-hero" style="background-image:url('images/about-photo-2.jpeg');">
-      <div class="container page-hero__inner">
-        <span class="page-hero__eyebrow">Support our work</span>
-        <h1>Change starts here...</h1>
-        <p class="lede">Creating social change through classical and contemporary music</p>
-      </div>
-    </section>
+    <section class="donate-intro">
+  <div class="container donate-intro__grid">
+    <div class="donate-intro__copy">
+      <h1>Change starts here</h1>
+      <p class="lede">Creating social change through classical and contemporary music</p>
+    </div>
 
-    <section class="section reveal" data-reveal>
-      <div class="container container--narrow stack-lg">
-        <dbox-widget campaign="general-donations-957900" type="donation_form" enable-auto-scroll="true"></dbox-widget>
+    <div class="donate-intro__media">
+      <img src="images/about-photo-2.jpeg" alt="Musicians for Progress performers at an event.">
+    </div>
+  </div>
+</section>
+
+    <section class="section reveal donate-form-section" data-reveal>
+      <div class="container container--narrow stack-lg donate-form-wrap">
+        <dbox-widget
+          campaign="general-donations-957900"
+          type="donation_form"
+          enable-auto-scroll="true">
+        </dbox-widget>
 
         <noscript>
           <p>
