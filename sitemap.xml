@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  XML Sitemap for musiciansforprogress.com
+  Tells search engines about every public page and how to prioritize them.
+
+  HOW TO SUBMIT:
+    1. Once your site is live at musiciansforprogress.com, submit this
+       sitemap directly in Google Search Console:
+       https://search.google.com/search-console
+       → Select your property → Sitemaps → paste:
+         https://musiciansforprogress.com/sitemap.xml
+
+  HOW TO UPDATE:
+    - When you add a new page, add a new <url> block here following the
+      same pattern.
+    - Update <lastmod> on a page's entry whenever you make a significant
+      content change (not required, but helps Google re-crawl sooner).
+    - <priority> is relative: 1.0 = most important, 0.5 = normal,
+      0.3 = lower importance. Don't set everything to 1.0 — Google
+      ignores priority when all values are equal.
+    - <changefreq> is a hint only (Google may ignore it), but it's good
+      practice to set it to reflect how often you actually update the page.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://musiciansforprogress.com/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://musiciansforprogress.com/about.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://musiciansforprogress.com/events.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://musiciansforprogress.com/project-ode.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://musiciansforprogress.com/who-we-support.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://musiciansforprogress.com/media.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://musiciansforprogress.com/get-involved.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://musiciansforprogress.com/donate.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
