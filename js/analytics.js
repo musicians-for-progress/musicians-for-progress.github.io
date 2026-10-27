@@ -1,11 +1,3 @@
-/**
- * Google Analytics (GA4) — optional, OFF by default.
- *
- *
- * This file is included on every page, but makes zero network requests
- * and does nothing until MEASUREMENT_ID is set — so enabling analytics
- * site-wide is a one-line, one-file change.
- */
 (function () {
   const MEASUREMENT_ID = "G-54M8WNP26T";
   if (!MEASUREMENT_ID) return;
